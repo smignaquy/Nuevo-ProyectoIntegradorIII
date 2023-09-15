@@ -9,15 +9,34 @@ class ScreenCancion extends Component{
             dataCancion: [],
         }
     }
+
+    componentDidMount(){
+        //llamo a la api
+        fetch(`https://thingproxy.freeboard.io/fetch/https://api.deezer.com/track/${this.state.id}`)
+        .then(res => res.json())
+        .then(data => {
+            console.log('data', data)
+            this.setState({
+                dataCancion: data,
+            })
+        })
+        .catch(function(error){
+        console.log('El error es: ' + error);
+        })
+
+        //this.artistaClickeado(id)
+    }
+
     render(){
+        console.log(this.state.dataCancion.album)
         return(
             <>
-                <h2 class="artistas">Cancion CLICKEADA {this.state.id}</h2>
-                <button id="btn" className="BotonFavoritos"><Link to='/playlist'>Agregar a favoritos</Link></button>
+                <h2 class="artistas">{this.state.dataCancion.title}</h2>
                 <article className="cajita-canciones">
-                    <h4>El mismo aire</h4>
-                    <p>La Konga</p>
-                    <iframe src="https://open.spotify.com/embed/track/5Y0hkLkzdrTuPGWYLvm6oO?utm_source=generator" width="50%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+                    {/* <img src={this.state.dataCancion.album} alt="Portada del Album" />  */}
+                    {/* <h3>Artista: {this.state.dataCancion.artist.name}</h3> */}
+                    {/* <h3> Pertenece al disco: {this.state.dataCancion.album.title}</h3> */}
+                    <iframe src={this.state.dataCancion.preview} width="80%" height="300" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
                 </article>
             </>
         )

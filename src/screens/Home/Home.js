@@ -37,26 +37,6 @@ class Index extends Component{
 
         return(     
             <section>
-
-                {/* ARTISTAS */}
-
-                <div className="btnVer">
-                    <h2 className="h2artistas">TOP Artistas</h2>
-                    <button id="btn" className="btnVer"><Link to='/vertodo/artistas'>Ver todos</Link></button>
-                </div>
-                    <main className="cantantes">
-                        {this.state.dataArtist.length  ===0 ? (
-                            <img src='./img/loadingGif.gif' alt='Espere a que carge..' className="gif"/>
-                        ) : (
-                            this.state.dataArtist.slice(5).map((unArtista,idx ) => (
-                                    <TarjetaArtist data={unArtista} key={unArtista.id}/>
-                            ))
-                        )
-                        
-                    }
-                    </main>
-
-
                 {/* ALBUMES */}
 
                 <div className="btnVer">

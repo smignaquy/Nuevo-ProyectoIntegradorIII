@@ -25,7 +25,6 @@ class Header extends Component{
                 <div className="seccionesdiv">
                     <Link to="/" className='secciones'>Home</Link>
                     <Link to="/vertodo/canciones" className='secciones'>Ver todas las canciones</Link>
-                    <Link to="/vertodo/artistas" className='secciones'>Ver todas los artistas</Link>
                     <Link to="/vertodo/albumes" className='secciones'>Ver todas los albums</Link>
                     <Link to="/playlist" className='secciones'>Playlist</Link>
                 </div>

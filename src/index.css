@@ -1,0 +1,731 @@
+/* Estilos globales */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Raleway', sans-serif;
+}
+
+/* Reset de lista */
+li {
+  list-style: none;
+}
+
+/* Enlaces */
+a {
+  text-decoration: none;
+  color: black;
+}
+
+/* Cuerpo */
+body {
+  background-color: black;
+  color: white;
+}
+
+/* Títulos */
+h1 {
+  color: white;
+  font-family: 'Raleway';
+  padding-top: 30px;
+  font-size: 30px;
+}
+h2 {
+  color: white;
+  font-family: 'Bebas Neue';
+  padding-top: 30px;
+}
+
+/* Efecto de hover para títulos */
+h1:hover,
+.logo:hover,
+.nombre:hover {
+  transform: scale(1.1);
+  transition: all 300ms;
+}
+
+/* Contenedor de secciones */
+.seccionesdiv {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 10px 150px;
+  background-color: azure;
+}
+
+/* Efecto de hover para secciones */
+.secciones:hover {
+  background-color: black;
+  color: white;
+  padding: 1.2px;
+  transition: all 300ms;
+}
+
+/* Cabecera */
+.cabecera {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+#btn {
+  padding: 7px;
+  border-radius: 30px;
+}
+
+/* Campo de búsqueda */
+.buscar {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  padding: 10px 15px;
+  width: 300px;
+  height: 30px; 
+  font-size: 14px; 
+  outline: none;
+  border: 1px solid azure;
+  border-radius: 20px; 
+  background-color: azure; 
+  transition: border-color 0.3s, box-shadow 0.3s; 
+}
+
+.div_buscar{
+  margin-right: 0;
+}
+
+/* Botón de búsqueda */
+#btn {
+  margin-left: 12px;
+  border-radius: 30px; 
+  background-color: azure;
+  transition: background-color 0.3s; /* Transición suave del color de fondo */
+}
+
+/* Estilo del botón de búsqueda al pasar el mouse sobre él */
+#btn:hover {
+  background-color: gray;
+}
+
+.btnVer {
+  text-align: center;
+  padding-bottom: 30px;
+}
+.verIndex{
+  padding: 15px;
+  margin: 5px;
+}
+
+.width{
+  text-align: center;
+  width: 100%;
+}
+
+.miniDescrip {
+  border-color: #ccc;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 14px;
+  text-align: center;
+}
+
+/* Estilo para mostrar la descripción mini cuando se expande */
+.miniDescrip.expandido {
+  display: block;
+}
+
+
+
+/* Logo */
+img.logo {
+  padding-top: 22px;
+  transform: scale(1);
+  width: 70px;
+}
+
+/* Banner */
+.banner {
+  width: 100%;
+  height: 300px;
+}
+
+/* Pie de página */
+.footer {
+  font-size: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px 150px;
+}
+
+.divFooter {
+  padding-top: 80px;
+  margin-bottom: 0%;
+}
+
+p.nombre{
+  color: white;
+}
+
+/* Iconos de redes sociales */
+.fa-brands {
+  color: white;
+  font-size: 40px;
+}
+
+/* Efectos de hover para iconos de redes sociales */
+.fa-instagram:hover {
+  color: rgb(204, 56, 93);
+}
+.fa-facebook-square:hover {
+  color: cornflowerblue;
+  outline: none;
+}
+.fa-twitter:hover {
+  color: deepskyblue;
+}
+
+/* Contenedor de integrantes */
+.integrantes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: azure;
+  color: black;
+  margin: 10px;
+  padding: 7px;
+}
+
+/* Efectos de hover para imágenes de integrantes */
+.articulos:hover,
+.ulises:hover,
+.rodrigoimg:hover,
+.lamona:hover {
+  transform: scale(1.1);
+  transition: all 300ms;
+}
+.lamona {
+  font-size: 20px;
+  padding: 10px;
+  text-align: center;
+  padding-bottom: 30px;
+
+}
+
+/* Filtro */
+.labelFiltro{
+  margin-left: 10px;
+}
+.inputFiltro{
+  margin-left: 5px;
+}
+.cajaFiltro{
+  margin: 15px;
+}
+
+
+
+/* Contenedor de cantantes */
+.cantantes {
+  padding-bottom: 60px;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  justify-content: center;
+}
+
+/* Imágenes de cantantes */
+.la21:hover,
+.articulos,
+.artist2,
+.lakongaa,
+.la21,
+.lamona,
+.ulises,
+.rodrigoimg {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 10px;
+}
+
+/* Imágenes de cantantes */
+.rodrigoimg {
+  width: 200px;
+}
+
+/* Contenedor de canciones */
+.cancion {
+  padding: 120px;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+/* Imágenes de álbumes */
+.aire {
+  width: 300px;
+  height: 200px;
+}
+
+/* Contenedor de secciones de género */
+.songs {
+  padding-bottom: 10px;
+}
+
+/* Título de género */
+.CU-AR-TE-TO {
+  font-size: 100px;
+  text-align: center;
+}
+
+/* Descripción de género */
+.detallegenero {
+  text-align: center;
+}
+
+/* Botón "Ver Más" */
+.vermas,
+.vermas2 {
+  color: black;
+  width: 190px;
+  padding: 4px;
+  background-color: white;
+  text-align: center;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Efecto de hover para botones "Ver Más" */
+.vermas:hover {
+  transform: scale(1.1);
+  transition: all 300ms;
+}
+
+/* Contenedor de álbumes */
+.Albumes {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+/* Contenedor de disco de PA */
+.discopa {
+  padding-bottom: 80px;
+}
+
+/* Título de discos */
+.discos {
+  font-size: 30px;
+  padding: 50px;
+  text-align: center;
+}
+
+/* Contenedor de imágenes de álbumes */
+.albumesfotos {
+  padding-bottom: 60px;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  justify-content: center;
+}
+
+/* Contenedor de canciones en la página de inicio */
+.cancionesindex {
+  padding-bottom: 60px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+}
+
+/* Imágenes de álbumes en la página de inicio */
+/* .albumeskonga,
+.albumesrodri,
+.albumesuli {
+  width: 350px;
+} */
+
+/* Efecto de hover para imágenes de álbumes */
+.album:hover {
+  transform: scale(1.05);
+  transition: all 300ms;
+}
+.album{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+}
+.nombresIndex{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+}
+
+/* Títulos de sección */
+.h2albumes,
+.h2artistas,
+.h2canc {
+  text-align: center;
+  padding: 30px;
+  padding-bottom: 0%;
+  font-size: 40px;
+}
+
+/* Título de género en la página de inicio */
+.generito {
+  padding: 30px;
+  text-align: center;
+}
+
+/* Estilo de tarjetas de género */
+.cuartetito {
+  border-radius: 15px;
+}
+
+/* Efecto de hover para tarjetas de género */
+.generito:hover {
+  transform: scale(1.1);
+  transition: all 300ms;
+}
+
+/* Nombre de género en la página de inicio */
+.generoNombre {
+  text-align: center;
+}
+
+/* Contenedor de detalle de género */
+section.generodetail {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  padding: 15px;
+}
+
+/* Imágenes de Mona Jiménez */
+.mona {
+  margin: 30px;
+  padding: 15px;
+  width: 150px;
+}
+
+/* Imágenes */
+.img {
+  width: 170px;
+}
+
+/* Información del disco */
+.info {
+  color: yellow;
+}
+
+/* Información del disco en la página de género */
+.infodelDisco {
+  text-align: center;
+  padding: 50px;
+}
+
+/* Contenedor de playlists */
+.playlist {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+/* Reproductor de canciones */
+.play {
+  text-align: center;
+  margin: 10px;
+  border-radius: 10px;
+}
+
+/* Enlace de canción */
+.link {
+  padding: 90px;
+  color: white;
+}
+
+/* Texto de abajo */
+.textoabajo {
+  text-align: center;
+}
+
+/* Contenedor de canción */
+.cancion {
+  text-align: center;
+  padding: 30px;
+}
+
+/* Artistas */
+.artistas {
+  text-align: center;
+  font-size: 50px;
+  padding: 60px;
+}
+
+/* ID de cantante */
+.idcantante {
+  color: white;
+}
+
+/* Enlace de cantante */
+.link2 {
+  color: white;
+  text-align: center;
+}
+
+/* Contenedor de foto de artista */
+.fotoartist {
+  width: 300px;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  align-items: center;
+  font-size: 30px;
+}
+
+/* Contenedor de discos */
+.disc {
+  padding-bottom: 60px;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  justify-content: center;
+}
+
+/* Artistas en JavaScript */
+.artistasJs {
+  padding-top: 60px;
+}
+
+/* Cantantes */
+.cantante {
+  padding-bottom: 60px;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  justify-content: center;
+}
+
+/* Tarjetas de canciones de cantantes */
+.cantanteCanciones {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  justify-content: center;
+  padding: 5px;
+  margin: 10px;
+  background-color: grey;
+}
+
+/* Efecto de hover para tarjetas de canciones de cantantes */
+.cantanteCanciones:hover {
+  transform: scale(1.1);
+  transition: all 300ms;
+}
+
+/* Enlace de cantante en tarjetas de canciones */
+.linkcantante {
+  color: white;
+}
+
+/* Canción */
+.cancion {
+  text-align: center;
+  padding: 30px;
+}
+
+/* Iframe */
+.ifra {
+  padding-bottom: 20px;
+}
+
+
+/* Iframe de álbum */
+.ifram {
+  padding: 30px;
+}
+
+
+/* Géneros */
+.genres {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+/* Contenedor de detalle de artista */
+section.detailArtist {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 15px;
+}
+
+/* Artista de Córdoba */
+.gif{
+  width: 30px;
+}
+
+/* Artista de Córdoba */
+.cordoba {
+  align-items: center;
+}
+
+/* Detalle del artista */
+article.detailArtist {
+  padding: 30px;
+}
+
+/* Efecto de hover para detalle de artista */
+article.detailArtist:hover {
+  transform: scale(1.1);
+  transition: 300ms;
+}
+
+/* Tarjeta de reproducción de canción */
+.trackPlay {
+  color: black;
+  width: 190px;
+  padding: 4px;
+  background-color: white;
+  text-align: center;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Efecto de hover para tarjeta de reproducción de canción */
+.trackPlay:hover {
+  transform: scale(1.1);
+  transition: all 300ms;
+}
+
+/* Enlace en tarjeta de reproducción de canción */
+.linke {
+  color: white;
+}
+
+/* Imágenes de búsqueda */
+.imgsearch {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Contenedor de búsqueda */
+.search {
+  padding-bottom: 60px;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  justify-content: center;
+}
+
+/* Tarjetas de canciones en la página de búsqueda */
+.cantanteCanciones2 {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  justify-content: center;
+  padding: 5px;
+  margin: 10px;
+  background-color: grey;
+}
+
+/* Efecto de hover para tarjetas de canciones en la página de búsqueda */
+.cantanteCanciones2:hover {
+  transform: scale(1.1);
+  transition: all 300ms;
+}
+
+/* Texto de búsqueda */
+.buscate {
+  text-align: center;
+  font-size: 30px;
+  padding: 40px;
+}
+
+/* Estilo base para pantallas grandes */
+h1 {
+  font-size: 30px;
+}
+
+.nombreHome{
+  color: white;
+}
+
+.contenedorNF{
+  background-size: auto;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+}
+
+
+
+/* Media query para pantallas pequeñas */
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 20px; /* Ajusta el tamaño de fuente para pantallas pequeñas */
+  }
+}
+
+
+.album {
+  max-width: 200px; /* Ajusta el ancho máximo según tus preferencias */
+  border: 1px solid #ccc; /* Un borde para separar las cajas */
+  margin: 10px; /* Espaciado entre las cajas */
+  padding: 10px; /* Espaciado interno */
+  overflow: hidden; /* Oculta el contenido que sobresale */
+}
+
+.album img {
+  max-width: 100%;
+  height: auto;
+}
+
+.album-info {
+  white-space: nowrap; /* Evita el desbordamiento de texto hacia abajo */
+  overflow: hidden; /* Oculta el texto que sobresale */
+  text-overflow: ellipsis; /* Agrega puntos suspensivos si el texto es demasiado largo */
+}
+
+.BotonFavoritos { 
+  text-align: center;
+  font-size: 20px;
+  padding: 10px;
+  text-align: center;
+  padding-bottom: 30px;
+}
+
+
+.cajita-canciones {
+  background-size: auto;
+  display: center;
+  text-align: center;
+  flex-wrap: wrap;
+}
+
+.playlist {
+  background-size: auto;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+}
+

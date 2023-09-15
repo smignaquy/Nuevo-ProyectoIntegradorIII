@@ -196,6 +196,10 @@ iframe.detalle{
   /* padding: 10px; */
 }
 
+.foto{
+  padding: 10px;
+}
+
 /* Iconos de redes sociales */
 .fa-brands {
   color: white;

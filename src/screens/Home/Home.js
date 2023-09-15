@@ -24,6 +24,7 @@ class Index extends Component{
                 dataArtist: data.artists.data, 
                 dataMusic: data.tracks.data 
             })
+            // console.log(data.albums.data);
         })
         .catch(function(error){
         console.log('El error es: ' + error);

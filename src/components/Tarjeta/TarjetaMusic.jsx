@@ -90,7 +90,7 @@ class TarjetaMusic extends Component{
             <>
                 <div key={unaMusica.id} className='album'>
                     <Link to={`/detalle/artista/${unaMusica.id}`}>
-                        <img src={unaMusica.artist.picture} alt="" />
+                        <img src={`https://e-cdn-images.dzcdn.net/images/cover/${unaMusica.md5_image}/264x264-000000-80-0-0.jpg`} alt="" />
                         <div className="nombresIndex">
                             <p className="nombreHome" key={unaMusica.id}>{unaMusica.title}</p>
                         </div>

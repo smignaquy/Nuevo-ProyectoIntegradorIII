@@ -9,6 +9,7 @@ import ScreenCancion from './screens/Detalle/ScreenCancion'
 import ScreenVerTodoArtista from './screens/VerTodo/VerTodoArtista';
 import ScreenVerTodoAlbumes from './screens/VerTodo/VerTodoAlbumes';
 import ScreenVerTodoCanciones from './screens/VerTodo/VerTodoCanciones';
+import SearchResults from './screens/SearchResults/SearchResults';
 import NotFound from './screens/NotFound/NotFound';
 import ScreenPlaylist from './screens/Playlist/ScreenPlaylist'
 
@@ -17,6 +18,7 @@ function App() {
     <>
       <Header/>
       <Switch>
+        <Route path='/search' component={SearchResults} />
         <Route path='/' exact={true} component={Home} />
         <Route path='/detalle/artista/:id' component={ScreenArtista} />
         <Route path='/detalle/album/:id' component={ScreenAlbum} />

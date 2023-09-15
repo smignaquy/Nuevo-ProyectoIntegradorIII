@@ -1,7 +1,4 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom/cjs/react-router-dom.min";
-import Favoritos from "../../components/Favoritos/Favoritos";
-import Playlist from '../../components/Playlist/Playlist'
 import TarjetaMusic from "../../components/Tarjeta/TarjetaMusic";
 
 class ScreenFavoritos extends Component{
@@ -15,41 +12,38 @@ class ScreenFavoritos extends Component{
   componentDidMount(){
     let arrayFavoritos = [];
     let arrayFavs = [];
+  
+    // datos del storage con la clave 'favoritos'
     let recuperoStorage = localStorage.getItem('favoritos');
-      
+    // ver si hay datos almacenados en 'favoritos'
     if(recuperoStorage !== null){
+      // convertirlos de JSON a un array y asignarlos a 'arrayFavoritos'
       arrayFavoritos = JSON.parse(recuperoStorage);
-      arrayFavoritos.map(function(id){
-        //llamo a la api
+  
+      arrayFavoritos.map((id) => {
+        console.log(id);
         fetch('https://thingproxy.freeboard.io/fetch/https://api.deezer.com/track/'+id)
         .then(res => res.json())
         .then(data => {
-          console.log(data)
-          arrayFavs.push(data)
-          //console.log('array favs', arrayFavs)
+          arrayFavs.push(data);
+
           this.setState({
-            favoritos : this.arrayFavs
-          })
-          console.log('array favs state', this.state.favoritos)
+            favoritos : arrayFavs
+          });
         })
         .catch(function(error){
           console.log('El error es: ' + error);
-        })
-      })
-      //console.log('array favs', arrayFavs)
+        });
+      });
     }
-    //console.log('array favs', arrayFavs)
-    // this.setState({
-    //   favoritos : arrayFavs
-    // })
-    //console.log('array favs state', this.state.favoritos)
   }
+  
 
   render(){
       return(
           <>
             <div className="playlist">
-              <h1> Esta es tu lista de favoritos: </h1>
+              <h2 className="h2artistas"> Esta es tu lista de favoritos: </h2>
             </div>
             <main className="cancionesindex">
                 {this.state.favoritos.length === 0 ? (
@@ -58,9 +52,7 @@ class ScreenFavoritos extends Component{
                         this.state.favoritos.map((unaMusica) => (
                             <TarjetaMusic data={unaMusica} key={unaMusica.id}/>
                           ))
-                          
                     )
-                    
                 }
                 </main>
           </>

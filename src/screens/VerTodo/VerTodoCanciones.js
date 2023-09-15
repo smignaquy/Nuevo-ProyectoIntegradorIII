@@ -9,6 +9,7 @@ class VerTodoCanciones extends Component{
         this.state = {
             dataMusic: [],
             limit: 10,
+            filtro: false
         }
     }
 
@@ -42,15 +43,16 @@ class VerTodoCanciones extends Component{
         );
       }
 
-      filtrarPersonajes(textoAFiltrar){
+      filtroObjetos(textoAFiltrar){
         //  Desarrollar el método
            let objetosFiltrados = this.state.dataMusic.filter(function(objeto){
                 //tenemos que chequear si el texto a filtrar está dentro del nombre del personaje. Usemos la funcuión includes()
-                return objeto.name.includes(textoAFiltrar)
+                return objeto.name.toUpperCase().includes(textoAFiltrar.toUpperCase())
             })
     
             this.setState({
                 dataMusic: objetosFiltrados,
+                filtro: true,
             })
         }
     
@@ -60,7 +62,7 @@ class VerTodoCanciones extends Component{
             <>
                 <h2 className="artistas">Todas las canciones</h2>
                 <div clas>
-                  < Filtro/>
+                  < Filtro handle={this.filtrarObjetos}/>
                 </div>
                 <main className="cancionesindex">
                     {this.state.dataMusic.length === 0 ? (
@@ -74,10 +76,14 @@ class VerTodoCanciones extends Component{
                     
                 }
                 </main>
-                <div className="btnVer">
-                    <p>Total Artistas: {this.state.limit} </p>
-                    <button id="btn" className="btnVer" onClick={()=>{this.cargarMas()}}>Cargar más</button>
-                </div>
+                {this.state.filtro ? (
+                  <h2>No se pueden cargar mas opciones si filtraste!</h2>
+                ) : (
+                  <div className="btnVer">
+                  <p>Total Artistas: {this.state.limit} </p>
+                  <button id="btn" className="btnVer" onClick={()=>{this.cargarMas()}}>Cargar más</button>
+              </div>
+                )}
             </>
         )
     }

@@ -2,8 +2,8 @@ import React, {Component} from 'react';
 
 class Filtro extends Component {
 
-    constructor(){
-        super()
+    constructor(props){
+        super(props)
         this.state = {
             valorDelInput:''
         }
@@ -11,12 +11,12 @@ class Filtro extends Component {
 
     controlarEnvio(event){
         event.preventDefault();
-        return true
+        this.props.handle(this.state.valorDelInput)
     }
 
-    guardarlInput(event){
+    guardarElInput(event){
         this.setState({
-            valorDelInput: event.target.value
+            valorDelInput: event.target.value,
         }, () => console.log(this.state.valorDelInput))
     }
 
@@ -24,7 +24,7 @@ class Filtro extends Component {
         return(
             <form action="" onSubmit={(e)=>this.controlarEnvio(e)}>
                 <label className='labelFiltro' htmlFor="">Filtrar por: </label>
-                <input className='inputFiltro' type="text" name="filtro" onChange={(e)=>this.guardarlInput(e)} value={this.state.valorDelInput} />
+                <input className='inputFiltro' type="text" name="filtro" onChange={(e)=>this.guardarElInput(e)} value={this.state.valorDelInput} />
                 <button id="btn" className="btnVer verIndex" type='submit'>Filtrar</button>
             </form>
         )

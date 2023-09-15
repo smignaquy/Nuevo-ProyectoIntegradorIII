@@ -62,20 +62,19 @@ class SearchResults extends Component{
         console.log(this.state.resultsMusic);
         return(
             <>
-                
-                <h3 className="search">Resultado de la busqueda: {this.state.busqueda}</h3>
-                <main className="cancionesindex">
-                {this.state.resultsMusic.length === 0 ? (
-                        <img src='./img/loadingGif.gif' alt='Espere a que carge..' className="gif"/>
-                    ) : (
-                        this.state.resultsMusic.slice(5).map((unaMusica) => (
-                            <TarjetaMusic data={unaMusica} key={unaMusica.id}/>
-                          ))
-                          
-                    )
-                    
-                }
-                </main>
+                  <h3 className="search">Resultado de la busqueda: {this.state.busqueda}</h3>
+                  <main className="cancionesindex">
+                  {this.state.resultsMusic.length === 0 ? (
+                            <img src='./img/loadingGif.gif' alt='Espere a que carge..' className="gif"/>
+                      ) : (
+                          this.state.resultsMusic.slice(5).map((unaMusica) => (
+                              <TarjetaMusic data={unaMusica} key={unaMusica.id}/>
+                            ))
+                            
+                      ) 
+                      
+                  }
+                  </main>
             </>
         )
     }

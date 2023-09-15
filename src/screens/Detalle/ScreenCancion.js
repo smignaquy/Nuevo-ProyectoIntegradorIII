@@ -19,6 +19,7 @@ class ScreenCancion extends Component{
             this.setState({
                 dataCancion: data,
             })
+
         })
         .catch(function(error){
         console.log('El error es: ' + error);
@@ -28,19 +29,27 @@ class ScreenCancion extends Component{
     }
 
     render(){
-        console.log(this.state.dataCancion.album)
-        return(
+        // console.log(this.state.dataCancion.album);
+        let nombreArtista = this.state.dataCancion.artist ? this.state.dataCancion.artist.name : 'Nombre no disponible';
+        let albumCancion = this.state.dataCancion.album ? this.state.dataCancion.album.title : 'Nombre no disponible';
+        
+        return (
             <>
-                <h2 class="artistas">{this.state.dataCancion.title}</h2>
+           
+                <h2 className="artistas">{this.state.dataCancion.title}</h2>
                 <article className="cajita-canciones">
-                    {/* <img src={this.state.dataCancion.album} alt="Portada del Album" />  */}
-                    {/* <h3>Artista: {this.state.dataCancion.artist.name}</h3> */}
-                    {/* <h3> Pertenece al disco: {this.state.dataCancion.album.title}</h3> */}
-                    <iframe src={this.state.dataCancion.preview} width="80%" height="300" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+                    <img src={`https://e-cdn-images.dzcdn.net/images/cover/${this.state.dataCancion.md5_image}/264x264-000000-80-0-0.jpg`} alt="Portada del Album"/>
+                    <h2>Artista: </h2><h3>{nombreArtista}</h3>
+                    <h2>Pertenece al album: </h2><h3>{albumCancion}</h3>
+                    <div className="detalle">
+                        <iframe className="detalle" src={this.state.dataCancion.preview} frameBorder="0"/>
+                    </div>
                 </article>
+            
             </>
-        )
+          );
     }
+    
 }
 export default ScreenCancion; 
 

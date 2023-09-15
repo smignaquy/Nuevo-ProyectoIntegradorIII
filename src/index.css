@@ -88,6 +88,7 @@ h1:hover,
   transition: border-color 0.3s, box-shadow 0.3s; 
 }
 
+
 .div_buscar{
   margin-right: 0;
 }
@@ -164,6 +165,20 @@ img.logo {
 
 p.nombre{
   color: white;
+}
+
+.detalle iframe{
+  border: 1px solid #ccc; /* Un borde para separar las cajas */
+  height: 60px;
+  padding: 10px;
+  margin: 10px;
+}
+
+iframe.detalle{
+  border-radius: 20px;
+  height: 100%;
+  /* width: 100%; */
+  /* padding: 10px; */
 }
 
 /* Iconos de redes sociales */
@@ -543,16 +558,6 @@ section.generodetail {
   padding: 30px;
 }
 
-/* Iframe */
-.ifra {
-  padding-bottom: 20px;
-}
-
-
-/* Iframe de álbum */
-.ifram {
-  padding: 30px;
-}
 
 
 /* Géneros */

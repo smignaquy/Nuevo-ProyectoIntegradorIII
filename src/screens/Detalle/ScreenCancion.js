@@ -39,8 +39,10 @@ class ScreenCancion extends Component{
                 <h2 className="artistas">{this.state.dataCancion.title}</h2>
                 <article className="cajita-canciones">
                     <img src={`https://e-cdn-images.dzcdn.net/images/cover/${this.state.dataCancion.md5_image}/264x264-000000-80-0-0.jpg`} alt="Portada del Album"/>
+                    {/* informacion */}
                     <h2>Artista: </h2><h3>{nombreArtista}</h3>
                     <h2>Pertenece al album: </h2><h3>{albumCancion}</h3>
+                    <h2>Fecha de publicacion</h2><h3>{this.state.dataCancion.release_date}</h3>
                     <div className="detalle">
                         <iframe className="detalle" src={this.state.dataCancion.preview} frameBorder="0"/>
                     </div>
